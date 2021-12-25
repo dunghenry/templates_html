@@ -1,0 +1,332 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Times New Roman", Georgia, Serif;
+  color: black;
+}
+* a {
+  text-decoration: none;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+header {
+  width: 100%;
+  position: fixed;
+  z-index: 3;
+}
+header .menu {
+  background-color: #ffff;
+  width: 100%;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 16px;
+  letter-spacing: 4px;
+}
+header .menu .menu-left {
+  padding: 8px 16px;
+}
+header .menu .menu-left a {
+  padding: 8px 16px;
+}
+header .menu .menu-left a:hover {
+  background-color: #ccc;
+}
+header .menu .menu-right {
+  padding: 8px 16px;
+}
+header .menu .menu-right ul.list-group {
+  list-style: none;
+}
+header .menu .menu-right ul.list-group li.list-group-item {
+  display: inline-block;
+}
+header .menu .menu-right ul.list-group li.list-group-item a {
+  padding: 8px 16px;
+}
+header .menu .menu-right ul.list-group li.list-group-item a:hover {
+  background-color: #ccc;
+}
+
+nav {
+  width: 100%;
+  position: relative;
+}
+nav img {
+  height: 800px;
+  width: 100%;
+}
+nav .title {
+  position: absolute;
+  bottom: 9%;
+  left: 3%;
+  font-size: 1.5rem;
+  letter-spacing: 5px;
+}
+nav .title h2 {
+  color: #8c8585;
+  font-weight: 400;
+}
+
+content {
+  width: 100%;
+}
+content .content-center {
+  width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+content .about {
+  padding-top: 64px;
+  padding-bottom: 64px;
+  display: flex;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.211);
+}
+content .about .about-img {
+  width: 48%;
+  padding: 12px 24px;
+}
+content .about .about-img img {
+  width: 100%;
+  border-radius: 4px;
+  opacity: 0.75;
+}
+content .about .about-text {
+  width: 50%;
+  padding: 12px 24px;
+}
+content .about .about-text h1.title {
+  text-align: center;
+  letter-spacing: 4px;
+  font-size: 2.5rem;
+  margin: 10px 0px;
+  font-weight: 300;
+}
+content .about .about-text h3.text-center {
+  text-align: center;
+  letter-spacing: 4px;
+  font-weight: 300;
+  margin: 10px 0px;
+}
+content .about .about-text p.text-large {
+  line-height: 24px;
+  font-size: 1.2rem;
+  margin: 18px 0px;
+}
+content .about .about-text p.text-gray {
+  color: #757575;
+  margin: 18px 0px;
+  font-size: 1.2rem;
+}
+content .menu {
+  padding: 64px 0px;
+  display: flex;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.211);
+}
+content .menu .menu-text {
+  width: 50%;
+}
+content .menu .menu-text h2.title {
+  font-size: 2.5rem;
+  letter-spacing: 4px;
+  font-weight: 300;
+  text-align: center;
+  margin: 10px 0px;
+}
+content .menu .menu-text h4 {
+  font-size: 1.3rem;
+  letter-spacing: 4px;
+  font-weight: 300;
+  margin: 10px 0px;
+}
+content .menu .menu-text p.text-gray {
+  margin: 20px 0px;
+  color: gray;
+}
+content .menu .menu-img {
+  padding: 8px 24px;
+}
+content .menu .menu-img img {
+  opacity: 0.75;
+  border-radius: 4px;
+}
+content .contact {
+  width: 100%;
+  padding: 64px 16px;
+}
+content .contact h2.title {
+  font-size: 2.5rem;
+  letter-spacing: 4px;
+  font-weight: 300;
+  margin: 10px 0px;
+}
+content .contact p {
+  font-size: 0.95rem;
+  margin: 15px 0px;
+  line-height: 24px;
+}
+content .contact p.text-blue {
+  margin: 18px 0px;
+}
+content .contact p.text-blue b {
+  color: #607d8b;
+}
+content .contact form {
+  width: 100%;
+}
+content .contact form p {
+  border-bottom: 1px solid rgba(128, 128, 128, 0.224);
+}
+content .contact form p input {
+  padding: 20px 0px;
+  border: none !important;
+  outline: none !important;
+}
+content .contact form p button {
+  cursor: pointer;
+  padding: 10px 10px;
+  border: none;
+}
+content .contact form p button:hover {
+  background: rgba(128, 128, 128, 0.428);
+}
+content .contact form p:last-child {
+  margin-top: 20px;
+  border: none;
+}
+
+footer {
+  text-align: center;
+  padding: 32px 0px;
+  background-color: #f1f1f1;
+}
+footer p {
+  margin: 15px 0px;
+}
+footer p a {
+  text-decoration: underline;
+}
+
+@media all and (max-width: 1025px) {
+  header {
+    left: 0;
+    width: 100%;
+    position: fixed;
+    top: 0;
+  }
+  header .menu {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  header .menu .menu-left {
+    width: 40%;
+  }
+  nav {
+    width: 100%;
+  }
+  nav img {
+    height: 80%;
+  }
+
+  content {
+    width: 100%;
+  }
+  content .content-center {
+    width: 97%;
+    text-align: justify;
+  }
+  content .content-center .menu .menu-text {
+    margin: 8px 0px;
+  }
+  content .content-center .contact p {
+    width: 98%;
+  }
+}
+@media all and (max-width: 769px) {
+  header {
+    width: 100%;
+    position: unset;
+  }
+  header .menu {
+    width: 100% !important;
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0px;
+  }
+  header .menu .menu-left {
+    width: 100%;
+    text-align: center;
+  }
+  header .menu .menu-right {
+    display: none;
+  }
+
+  content {
+    width: 100%;
+  }
+  content .content-center {
+    width: 100%;
+    text-align: justify;
+  }
+  content .content-center .menu {
+    width: 100%;
+    display: block;
+  }
+  content .content-center .menu .menu-text {
+    width: 100%;
+    text-align: center;
+    margin: 8px 0px;
+  }
+  content .content-center .menu .menu-img {
+    width: 100%;
+    text-align: center;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  content .content-center .menu .menu-img img {
+    width: 91%;
+  }
+  content .content-center .contact {
+    padding-left: 2%;
+    padding-right: 0;
+    z-index: 999999;
+    width: 100%;
+  }
+  content .content-center .contact p {
+    width: 95%;
+  }
+  content .content-center .about {
+    width: 100%;
+    display: block;
+  }
+  content .content-center .about .about-img {
+    width: 100%;
+    text-align: center;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  content .content-center .about .about-img img {
+    width: 91%;
+  }
+  content .content-center .about .about-text {
+    width: 95%;
+    padding-left: 2%;
+    padding-right: 0;
+    text-align: center;
+  }
+
+  nav {
+    width: 100%;
+  }
+  nav img {
+    width: 100%;
+  }
+  nav .title h2 {
+    font-size: 80%;
+  }
+}/*# sourceMappingURL=style.css.map */

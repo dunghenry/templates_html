@@ -1,0 +1,8 @@
+1, Header(Đầu trang)
+2, Navigationơ(Thanh điều hướng)
+3, Breadcrumb(Thường là cái menu nhỏ xíu ở bên dưới header)
+4,Sidebar(Thường thì là menu bên phải hoặc bên trái hay bất cứ cái gì)
+5,Slider(Trình chiếu hình ảnh, video)
+6,Content(Nội dung chính của trang web)
+7,Footer(Phần cuối cùng của trang web)
+8,Banner(Thường là ảnh quảng cáo,...)

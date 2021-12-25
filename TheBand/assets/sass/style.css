@@ -1,0 +1,705 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.load {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #000001;
+  display: block;
+  z-index: 99999;
+}
+.load img {
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -35px;
+  margin-left: -35px;
+}
+
+#main #header {
+  z-index: 1;
+  top: 0;
+  height: 46px;
+  background: #000;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  box-sizing: inherit;
+  width: 100%;
+}
+#main #header #nav {
+  display: inline-block;
+}
+#main #header #nav ul {
+  height: 100%;
+  list-style: none;
+}
+#main #header #nav ul li {
+  height: 100%;
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+}
+#main #header #nav ul li a {
+  width: 100%;
+  height: 100%;
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 12px 24px;
+  box-sizing: border-box;
+}
+#main #header #nav ul li a i.fa-caret-down {
+  color: #fff;
+}
+#main #header #nav ul li a:hover {
+  color: #000;
+  background-color: #ccc;
+}
+#main #header #nav ul li a:hover i.fa-caret-down {
+  color: black;
+}
+#main #header #nav ul li #sub-nav {
+  position: absolute;
+  display: none;
+  background: #fff;
+  box-shadow: 0 0 20px rgba(245, 242, 242, 0.459);
+}
+#main #header #nav ul li #sub-nav ul {
+  width: 100%;
+}
+#main #header #nav ul li #sub-nav ul li {
+  width: 100%;
+}
+#main #header #nav ul li #sub-nav ul li a {
+  color: #000;
+  text-transform: none;
+  width: 100%;
+}
+#main #header #nav ul li:hover #sub-nav {
+  display: block;
+}
+#main #header #nav .nav-mobile {
+  display: none;
+}
+#main #header #nav .nav-mobile ul {
+  background-color: #000;
+}
+#main #header #nav .nav-mobile ul li {
+  display: block;
+}
+#main #header #search-btn {
+  padding: 12px 24px;
+  cursor: pointer;
+}
+#main #header #search-btn i.fa-search {
+  color: #fff;
+}
+#main #header #search-btn:hover {
+  background-color: #f44336;
+}
+#main #header #toggle-mobile {
+  padding: 12px 24px;
+  display: none;
+}
+#main #header #toggle-mobile i {
+  color: #fff;
+}
+#main #slider {
+  margin-top: 46px;
+  width: 100%;
+}
+#main #slider .mySlides {
+  position: relative;
+}
+#main #slider .mySlides img {
+  width: 100%;
+  height: 100%;
+}
+#main #slider .mySlides .text-title {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, 0);
+  padding-top: 32px;
+  padding-bottom: 32px;
+  color: #fff;
+}
+#main #slider .mySlides .text-title h3 {
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-weight: 400;
+  margin: 10px 0;
+  font-size: 24px;
+  text-align: center;
+  padding-bottom: 10px;
+  display: block;
+}
+#main #slider .mySlides .text-title p {
+  margin: 18px 0;
+}
+#main #content #band,
+#main #content #tour,
+#main #content #contact {
+  padding: 64px 0px;
+}
+#main #content #band .container .container-content,
+#main #content #tour .container .container-content,
+#main #content #contact .container .container-content {
+  padding: 0 16px;
+  max-width: 800px;
+  margin-right: auto;
+  margin-left: auto;
+}
+#main #content #band .container .container-content h2.text-title,
+#main #content #tour .container .container-content h2.text-title,
+#main #content #contact .container .container-content h2.text-title {
+  font-size: 30px;
+  margin: 10px 0;
+  font-weight: 400;
+  letter-spacing: 4px;
+  text-align: center;
+}
+#main #content #band .container .container-content p.text-opacity,
+#main #content #tour .container .container-content p.text-opacity,
+#main #content #contact .container .container-content p.text-opacity {
+  text-align: center;
+  opacity: 0.6;
+  font-style: italic;
+  margin: 15px 0;
+}
+#main #content #band .container .container-content p.text-justify,
+#main #content #tour .container .container-content p.text-justify,
+#main #content #contact .container .container-content p.text-justify {
+  text-align: justify;
+  font-size: 16px;
+  line-height: 1.5;
+}
+#main #content #band .container .row,
+#main #content #tour .container .row,
+#main #content #contact .container .row {
+  display: flex;
+  padding: 32px 0;
+  justify-content: space-around;
+}
+#main #content #band .container .row .row-child,
+#main #content #tour .container .row .row-child,
+#main #content #contact .container .row .row-child {
+  text-align: center;
+  align-items: center;
+  width: 33.333%;
+}
+#main #content #band .container .row .row-child p,
+#main #content #tour .container .row .row-child p,
+#main #content #contact .container .row .row-child p {
+  margin: 17px 0;
+  text-align: center;
+  line-height: 1.5;
+}
+#main #content #band .container .row .row-child img,
+#main #content #tour .container .row .row-child img,
+#main #content #contact .container .row .row-child img {
+  width: 154px;
+  height: 154px;
+  border-radius: 5px;
+}
+#main #content #tour {
+  background: #000;
+}
+#main #content #tour .container .container-content {
+  color: #fff;
+}
+#main #content #tour .container .container-content ul.list-group.text-grey {
+  list-style: none;
+  background: #fff;
+  color: #757575;
+}
+#main #content #tour .container .container-content ul.list-group.text-grey li {
+  padding: 8px 16px;
+  border-bottom: 1px solid #ddd;
+}
+#main #content #tour .container .container-content ul.list-group.text-grey li span.text-white {
+  background-color: #f44336;
+  margin-left: 16px;
+  color: #fff;
+  padding: 0 8px;
+}
+#main #content #tour .container .container-content ul.list-group.text-grey li span.text-right.bg-dark {
+  float: right;
+  margin-right: 16px;
+  background-color: #000;
+  border-radius: 50%;
+  padding: 3px 8px;
+}
+#main #content #tour .container .container-content .row .row-content {
+  margin: 0;
+  width: 33.33%;
+  display: block;
+  padding: 0 8px;
+}
+#main #content #tour .container .container-content .row .row-content .box-img {
+  position: relative;
+}
+#main #content #tour .container .container-content .row .row-content .box-img img {
+  width: 240px;
+  height: 184px;
+}
+#main #content #tour .container .container-content .row .row-content .box-img img:hover .bg-dark {
+  display: block;
+}
+#main #content #tour .container .container-content .row .row-content .box-img .bg-dark {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 98%;
+  left: 0;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.356);
+}
+#main #content #tour .container .container-content .row .row-content .box-img:hover .bg-dark {
+  display: block;
+}
+#main #content #tour .container .container-content .row .row-content .text-box {
+  margin-top: -2%;
+  width: 100%;
+  padding: 0 16px;
+  color: #000;
+  background: #fff;
+}
+#main #content #tour .container .container-content .row .row-content .text-box p {
+  padding-top: 15px;
+  font-size: 15px;
+}
+#main #content #tour .container .container-content .row .row-content .text-box p.text-grey {
+  opacity: 0.6;
+}
+#main #content #tour .container .container-content .row .row-content .text-box button.btn {
+  margin: 15px 0;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background-color: #000;
+  color: #fff;
+  padding: 8px 16px;
+}
+#main #content #tour .container .container-content .row .row-content .text-box button.btn:hover {
+  background-color: #ccc;
+  color: #000;
+}
+#main #content #contact .container .container-content .row {
+  display: flex;
+  justify-content: space-between;
+}
+#main #content #contact .container .container-content .row .row-left {
+  width: 30%;
+}
+#main #content #contact .container .container-content .row .row-left .row-left-small {
+  line-height: 30px;
+}
+#main #content #contact .container .container-content .row .row-left .row-left-small i {
+  font-size: 20px;
+}
+#main #content #contact .container .container-content .row .row-left .row-left-small span {
+  margin-left: 5%;
+}
+#main #content #contact .container .container-content .row .row-right {
+  width: 50%;
+}
+#main #content #contact .container .container-content .row .row-right form {
+  width: 100%;
+}
+#main #content #contact .container .container-content .row .row-right form .row-right-top {
+  margin-bottom: 8px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+#main #content #contact .container .container-content .row .row-right form .row-right-top .item {
+  width: 48%;
+}
+#main #content #contact .container .container-content .row .row-right form .row-right-top .item input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+}
+#main #content #contact .container .container-content .row .row-right form input {
+  width: 100%;
+  padding: 9px;
+  border: 1px solid #ccc;
+}
+#main #content #contact .container .container-content .row .row-right form button {
+  cursor: pointer;
+  float: right;
+  margin: 16px 0;
+  padding: 9px 16px;
+  border: none;
+  outline: none;
+  color: #fff;
+  background-color: #000;
+}
+#main #content #contact .container .container-content .row .row-right form button:hover {
+  background-color: #ccc;
+  color: #000;
+}
+#main #content #map img {
+  width: 100%;
+  filter: grayscale(50%);
+}
+#main #footer {
+  padding: 64px 16px;
+  width: 100%;
+  text-align: center;
+  background: #fff;
+}
+#main #footer i {
+  display: inline-block;
+  font-size: 25px;
+  color: #000;
+}
+#main #footer i:hover {
+  opacity: 0.6;
+}
+#main #footer p {
+  margin: 15px 0;
+  color: gray;
+  font-size: 15px;
+  line-height: 1.5;
+}
+#main #footer p a {
+  color: gray;
+}
+#main #bg-dark {
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.876);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+}
+#main #bg-dark.show {
+  display: block;
+}
+#main #ticketModal {
+  transform: translateY(-340%);
+  z-index: 4;
+  width: 65%;
+  height: 60%;
+  top: 100px;
+  left: 17.5%;
+  position: fixed;
+  transition: 1s ease;
+  opacity: 0;
+}
+#main #ticketModal .ticketModal-center {
+  width: 100%;
+}
+#main #ticketModal .ticketModal-center .ticketModal-header {
+  position: relative;
+  background-color: #009688;
+  color: #fff;
+  padding: 32px 16px;
+}
+#main #ticketModal .ticketModal-center .ticketModal-header span#close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 24px;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+#main #ticketModal .ticketModal-center .ticketModal-header span#close:hover {
+  background-color: #ccc;
+}
+#main #ticketModal .ticketModal-center .ticketModal-header h2 {
+  text-align: center;
+  margin: 10px 0;
+}
+#main #ticketModal .ticketModal-center .ticketModal-content {
+  background-color: #fff;
+  padding: 5px 16px;
+}
+#main #ticketModal .ticketModal-center .ticketModal-content p {
+  margin: 15px 0;
+}
+#main #ticketModal .ticketModal-center .ticketModal-content input {
+  height: 40px;
+  padding: 8px;
+  width: 100%;
+  border: 1px solid #ccc;
+  outline: none;
+}
+#main #ticketModal .ticketModal-center .ticketModal-content input:focus {
+  border: 2px solid gold;
+}
+#main #ticketModal .ticketModal-center .ticketModal-content button#btn-big {
+  width: 100%;
+  margin: 16px 0;
+  padding: 16px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: #009688;
+  color: #fff;
+}
+#main #ticketModal .ticketModal-center .ticketModal-content button#btn-big:hover {
+  background-color: #ccc;
+  color: #000;
+}
+#main #ticketModal .ticketModal-center .ticketModal-content button.btn-small {
+  color: #fff;
+  background-color: #f44336;
+  padding: 8px 16px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  margin: 16px 0;
+  cursor: pointer;
+}
+#main #ticketModal .ticketModal-center .ticketModal-content button.btn-small:hover {
+  background-color: #ccc;
+  color: #000;
+}
+#main #ticketModal .ticketModal-center .ticketModal-content #text-right {
+  float: right;
+}
+#main #ticketModal .ticketModal-center .ticketModal-content #text-right a {
+  color: #2196F3;
+}
+#main #ticketModal.display {
+  transform: translateY(0%);
+  opacity: 1;
+}
+
+@media screen and (max-width: 481px) {
+  #main {
+    width: 100%;
+  }
+  #main #header {
+    position: fixed;
+    width: 100%;
+    box-sizing: inherit !important;
+    top: 0;
+    left: 0;
+  }
+  #main #header #nav ul li {
+    display: none;
+  }
+  #main #header #nav ul li:first-child {
+    display: block;
+  }
+  #main #header #nav .nav-mobile {
+    display: none;
+  }
+  #main #header #nav .nav-mobile.show {
+    display: block;
+  }
+  #main #header #nav .nav-mobile {
+    width: 500% !important;
+  }
+  #main #header #search-btn {
+    display: none;
+  }
+  #main #header #toggle-mobile {
+    display: block !important;
+  }
+  #main #slider .mySlides .text-title {
+    display: none;
+  }
+  #main #content #band .container .container-content .row,
+#main #content #tour .container .container-content .row {
+    display: block !important;
+  }
+  #main #content #band .container .container-content .row .row-child,
+#main #content #tour .container .container-content .row .row-child {
+    width: 50% !important;
+    margin: auto;
+  }
+  #main #content #band .container .container-content .row .row-child img,
+#main #content #tour .container .container-content .row .row-child img {
+    width: 100% !important;
+    height: 100% !important;
+  }
+  #main #content #tour .container .container-content .row {
+    display: block !important;
+  }
+  #main #content #tour .container .container-content .row .row-content {
+    width: 90% !important;
+    margin: auto;
+    margin-top: 20px;
+  }
+  #main #content #tour .container .container-content .row .row-content img {
+    width: 100% !important;
+    height: 100% !important;
+  }
+  #main #content #contact .container .container-content .row {
+    display: block;
+  }
+  #main #content #contact .container .container-content .row .row-left {
+    width: 90%;
+    margin: auto;
+  }
+  #main #content #contact .container .container-content .row .row-right {
+    width: 90%;
+    margin: auto;
+    margin-top: 20px;
+  }
+  #main #content #contact .container .container-content .row .row-right form .row-right-top {
+    display: block;
+  }
+  #main #content #contact .container .container-content .row .row-right form .row-right-top .item {
+    width: 100%;
+  }
+  #main #bg-dark {
+    z-index: 5;
+  }
+  #main #ticketModal {
+    padding-top: 30px;
+    transform: translateY(-250%);
+    z-index: 5;
+    top: 35%;
+    width: 100% !important;
+    height: 100% !important;
+  }
+  #main #ticketModal .ticketModal-center {
+    width: 95% !important;
+  }
+}
+@media screen and (max-width: 600px) {
+  .item {
+    margin-bottom: 20px;
+  }
+
+  #main {
+    width: 100%;
+  }
+  #main #header #nav ul li:last-child {
+    display: none;
+  }
+  #main #slider .mySlides .text-title {
+    display: none;
+  }
+  #main #content #band .container .container-content .row,
+#main #content #tour .container .container-content .row {
+    display: block !important;
+  }
+  #main #content #band .container .container-content .row .row-child,
+#main #content #tour .container .container-content .row .row-child {
+    width: 50% !important;
+    margin: auto;
+  }
+  #main #content #band .container .container-content .row .row-child img,
+#main #content #tour .container .container-content .row .row-child img {
+    width: 100% !important;
+    height: 100% !important;
+  }
+  #main #content #tour .container .container-content .row {
+    display: block !important;
+  }
+  #main #content #tour .container .container-content .row .row-content {
+    width: 90% !important;
+    margin: auto;
+    margin-top: 20px;
+  }
+  #main #content #tour .container .container-content .row .row-content img {
+    width: 100% !important;
+    height: 100% !important;
+  }
+  #main #content #contact .container .container-content .row {
+    display: block;
+  }
+  #main #content #contact .container .container-content .row .row-left {
+    width: 90%;
+    margin: auto;
+  }
+  #main #content #contact .container .container-content .row .row-right {
+    width: 90%;
+    margin: auto;
+    margin-top: 20px;
+  }
+  #main #content #contact .container .container-content .row .row-right form .row-right-top {
+    display: block;
+  }
+  #main #content #contact .container .container-content .row .row-right form .row-right-top .item {
+    width: 100%;
+  }
+  #main #ticketModal {
+    height: 65% !important;
+  }
+}
+@media screen and (max-width: 691px) {
+  #main #slider .mySlides .text-title {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  #main {
+    width: 100%;
+  }
+  #main #ticketModal {
+    top: 50px;
+    width: 100%;
+    height: 45% !important;
+  }
+  #main #ticketModal .ticketModal-center {
+    width: 90% !important;
+  }
+  #main #content #tour .container .container-content .row .row-content .box-img img {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .load {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.768);
+    display: block;
+    z-index: 99999;
+  }
+  .load img {
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    top: 23%;
+    left: 50%;
+    margin-top: -35px;
+    margin-left: -35px;
+  }
+
+  #main {
+    width: 100%;
+  }
+  #main #ticketModal {
+    top: 60px;
+    left: 0;
+    width: 100%;
+    height: 35%;
+    bottom: 0;
+  }
+  #main #ticketModal .ticketModal-center {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}/*# sourceMappingURL=style.css.map */
